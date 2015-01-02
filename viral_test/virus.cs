@@ -1,6 +1,7 @@
 //Space Engineers proof of concept virus for ships - version .5 - Codename Shi'ido
 //by 0xicl33n
-//
+// You should have received a copy of the GNU General Public License
+//along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //lists of blocks stored here
 List<IMyTerminalBlock> batteries = new List<IMyTerminalBlock> ();
@@ -32,9 +33,9 @@ void Main() {
    }
    */
    //reverse pistsons - not working
-   for (int i = 0; i < pistons.count; i++){
-   	pistons[i].GetActionWithName("Reverse").Apply(pistons[i]);
-   }
+   //for (int i = 0; i < pistons.count; i++){
+   	//pistons[i].GetActionWithName("Reverse").Apply(pistons[i]);
+   //}
   
    //one run test shit
    /*
@@ -59,7 +60,7 @@ void Main() {
         //cockpitRayp = 1;
     }
 	//reverse gravity on all gravity generators ;)
-	for (int i =0; i < gravgen.count; i++){
+	for (int i =0; i < gravgen.Count; i++){
 		int x = 1;
 		while(x < 1000){
 			gravgen[i].GetActionWithName("DecreaseGravity").Apply(gravgen[i]);
