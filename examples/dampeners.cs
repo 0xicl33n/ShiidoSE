@@ -21,7 +21,7 @@
     //start with the first cockpit and go to the last, this way if ond is damaged then another picks up the slack
     for(int i = 0; i < CockpitCount; i++) {
         // check if the dampeners are on, if so do nothing 
-        if (((IMyCockpit)MyCockpit[i]).DampenersOverride) break;  
+        if (!(((IMyCockpit)MyCockpit[i]).DampenersOverride)) break;  
 
         //get the action to turn on/off the current block
         ITerminalAction toggleDampeners = MyCockpit[i].GetActionWithName("DampenersOverride");

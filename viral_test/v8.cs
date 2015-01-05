@@ -90,10 +90,11 @@ void Main() {
       {
         connector.GetActionWithName("CollectAll").Apply(connector); //From everywhere
       }
-      if(connector.IsLocked)
+      //Temporarily removed so ships that use connectors to launch the payload arent detached while executing
+      /*if(connector.IsLocked)
       {
         connector.GetActionWithName("SwitchLock").Apply(connector); //To nowhere
-      }
+      }*/
     }
    
     //Control Panels doesn't have anything that could be handled right now
